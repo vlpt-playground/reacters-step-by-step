@@ -1,0 +1,58 @@
+.AuthForm {
+  h3 {
+    margin: 0;
+    display: inline-flex;
+    color: $oc-gray-8;
+    margin-bottom: 1rem;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    input {
+      font-size: 1rem;
+      border: none;
+      border-bottom: 1px solid $oc-gray-5;
+      padding-bottom: 0.5rem;
+      outline: none;
+      &:focus {
+        color: $oc-teal-7;
+        border-bottom: 1px solid $oc-teal-7;
+      }
+    }
+    input + input {
+      margin-top: 1rem;
+    }
+    button {
+      border-radius: 1.25rem;
+      background: $oc-gray-9;
+      height: 2.5rem;
+      font-size: 1rem;
+      color: white;
+      font-weight: 600;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      cursor: pointer;
+      &:hover {
+        background: $oc-gray-7;
+      }
+    }
+    .error {
+      font-size: 0.875rem;
+      color: $oc-red-5;
+      text-align: center;
+      margin-top: 1rem;
+    }
+  }
+  .footer {
+    text-align: right;
+    a {
+      font-weight: 600;
+      text-decoration: underline;
+      color: $oc-gray-6;
+
+      &:hover {
+        color: $oc-gray-9;
+      }
+    }
+  }
+}
