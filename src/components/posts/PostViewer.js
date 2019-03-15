@@ -1,10 +1,20 @@
 import React from 'react';
 import './PostViewer.scss';
 import { formatDate } from '../../lib/common';
+import PostActions from './PostActions';
 
-const PostViewer = ({ title, username, date, body }) => {
+const PostViewer = ({
+  title,
+  body,
+  username,
+  date,
+  ownPost,
+  onEdit,
+  onRemove
+}) => {
   return (
     <div className="PostViewer">
+      {ownPost && <PostActions onEdit={onEdit} onRemove={onRemove} />}
       <h1 className="title">{title}</h1>
       <div className="meta">
         <span className="username">

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import 'quill/dist/quill.bubble.css';
 import './Editor.scss';
-
-import Quill from 'quill';
 import EditorHead from './EditorHead';
+import Quill from 'quill';
 
 class Editor extends Component {
   editor = React.createRef();
@@ -32,6 +31,8 @@ class Editor extends Component {
       }
     });
     this.quill = quill;
+
+    this.setPost();
   };
 
   handleChangeTitle = e => {
@@ -40,19 +41,41 @@ class Editor extends Component {
     });
   };
 
-  componentDidMount() {
-    this.initialize();
-  }
-
   focusEditor = () => {
     this.quill.focus();
+  };
+
+  // 에디터 초기상태 설정
+  setPost = () => {
+    const { post } = this.props;
+    if (!post) return;
+    this.setState({
+      title: post.title
+    });
+    this.quill.root.innerHTML = post.body;
   };
 
   handleSubmit = () => {
     this.props.onSubmit({
       title: this.state.title,
-      body: this.quill.root.innerHTML // 에디터 안의 내용을 html 형태로 출력
+      body: this.quill.root.innerHTML
     });
+  };
+  componentDidMount() {
+    this.initialize();
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.post !== this.props.post) {
+      // post 가 바뀔 경우 에디터 초기 상태 재설정
+      this.setPost();
+    }
+  }
+
+  handleKeyPress = e => {
+    if (e.key === 'Enter') {
+      this.focusEditor();
+    }
   };
 
   render() {
@@ -62,6 +85,7 @@ class Editor extends Component {
         <EditorHead
           onSubmit={this.handleSubmit}
           onCancel={this.props.onCancel}
+          edit={!!this.props.post} // 수정중이란것을 명시
         />
         <input
           placeholder="제목을 입력하세요."

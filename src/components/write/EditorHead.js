@@ -25,7 +25,7 @@ class EditorHead extends Component {
   }
 
   render() {
-    const { onSubmit, onCancel } = this.props;
+    const { onSubmit, onCancel, edit } = this.props;
     return (
       <>
         <div
@@ -39,7 +39,7 @@ class EditorHead extends Component {
               취소
             </button>
             <button className="submit" onClick={onSubmit}>
-              작성하기
+              {edit ? '수정하기' : '작성하기'}
             </button>
           </Responsive>
         </div>

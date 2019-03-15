@@ -1,0 +1,20 @@
+.PostActions {
+  display: flex;
+  justify-content: flex-end;
+  .buttons {
+    background: $oc-gray-0;
+
+    border: 1px solid $oc-gray-1;
+
+    button {
+      cursor: pointer;
+      padding: 0.5rem 0.75rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: $oc-gray-7;
+      &:hover {
+        background: white;
+      }
+    }
+  }
+}
