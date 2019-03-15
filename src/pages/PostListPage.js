@@ -17,7 +17,6 @@ const PostListPage = () => {
       <Responsive>
         <div className="PostListPage">
           <WithUser>{user => (user ? <WritePostButton /> : null)}</WithUser>
-          <WritePostButton />
           <PostListContainer />
           <PaginationContainer />
         </div>
