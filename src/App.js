@@ -5,6 +5,7 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import WritePage from './pages/WritePage';
 import PostPage from './pages/PostPage';
+import Core from './containers/base/Core';
 const App = () => {
   return (
     <>
@@ -13,6 +14,7 @@ const App = () => {
       <Route component={RegisterPage} path="/register" />
       <Route component={WritePage} path="/write" />
       <Route component={PostPage} path="/posts/:postId" />
+      <Core />
     </>
   );
 };

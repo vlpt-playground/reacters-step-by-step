@@ -1,0 +1,12 @@
+.Responsive {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 1024px;
+  margin: 0 auto;
+  @include media('<desktop') {
+    width: 768px;
+  }
+  @include media('<tablet') {
+    width: 100%;
+  }
+}

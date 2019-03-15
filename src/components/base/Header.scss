@@ -1,0 +1,42 @@
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  .logo {
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+  .right-area {
+    .logged-in {
+      display: flex;
+      align-items: center;
+      .username {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: $oc-gray-9;
+        margin-right: 0.5rem;
+      }
+    }
+    a,
+    button {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      border: 1px solid $oc-gray-8;
+      height: 2rem;
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+      font-size: 0.875rem;
+      border-radius: 1rem;
+      font-weight: 600;
+      color: $oc-gray-8;
+      &:hover {
+        background: $oc-gray-8;
+        color: white;
+      }
+    }
+  }
+}
