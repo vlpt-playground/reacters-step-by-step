@@ -1,0 +1,37 @@
+.Pagination {
+  display: flex;
+  margin-bottom: 3rem;
+  align-items: center;
+  justify-content: center;
+  a,
+  .disabled-btn {
+    width: 2rem;
+    height: 2rem;
+    background: $oc-gray-7;
+    border-radius: 1rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+  }
+  a {
+    cursor: pointer;
+    &:hover {
+      background: $oc-gray-5;
+    }
+  }
+  .disabled-btn {
+    background: $oc-gray-4;
+    color: $oc-gray-2;
+  }
+  .page {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: $oc-gray-7;
+    b {
+      color: $oc-gray-9;
+      font-weight: 600;
+    }
+  }
+}

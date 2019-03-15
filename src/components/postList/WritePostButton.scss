@@ -1,0 +1,19 @@
+.WritePostButton {
+  display: flex;
+  justify-content: flex-end;
+  a {
+    background: $oc-gray-9;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+
+    &:hover {
+      background: $oc-gray-6;
+    }
+    .text {
+      font-weight: 600;
+      margin-left: 0.5rem;
+    }
+  }
+}

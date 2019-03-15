@@ -1,0 +1,31 @@
+.PostList {
+  .post-item {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    .title {
+      color: $oc-gray-9;
+      font-size: 2rem;
+      font-weight: 800;
+      &:hover {
+        color: $oc-teal-6;
+      }
+    }
+    .meta {
+      margin-top: 0.5rem;
+      color: $oc-gray-6;
+      font-style: italic;
+      .separator {
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+      }
+    }
+    p {
+      color: $oc-gray-7;
+      font-size: 1.125rem;
+      line-height: 1.5;
+    }
+  }
+  .post-item + .post-item {
+    border-top: 1px solid $oc-gray-2;
+  }
+}
