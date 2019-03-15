@@ -1,0 +1,50 @@
+.EditorHead {
+  background: rgba(255, 255, 255, 0.875);
+  transition: 0.3s all ease-in;
+  &.scrolling {
+    box-shadow: 0 4px 16px 0px rgba(181, 181, 181, 0.16);
+  }
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  min-height: 0;
+  .wrapper {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+  button {
+    display: flex;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: 5rem;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    cursor: pointer;
+    &.cancel {
+      border: 1px solid $oc-gray-7;
+      color: $oc-gray-7;
+      &:hover {
+        color: $oc-red-6;
+        border: 1px solid $oc-red-6;
+      }
+    }
+    &.submit {
+      background: $oc-gray-9;
+      color: white;
+      &:hover {
+        background: $oc-gray-7;
+      }
+    }
+  }
+  button + button {
+    margin-left: 0.5rem;
+  }
+  & + .padding {
+    height: 4.125rem;
+  }
+}

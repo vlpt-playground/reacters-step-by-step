@@ -1,0 +1,31 @@
+.Editor {
+  .title {
+    width: 100%;
+    font-size: 2.5rem;
+    font-weight: 800;
+    border: none;
+    outline: none;
+    color: $oc-gray-9;
+    &::placeholder {
+      font-weight: 500;
+      color: $oc-gray-6;
+    }
+  }
+  .quill-editor {
+    padding-bottom: 3rem;
+    cursor: text;
+    min-height: 300px;
+    p {
+      line-height: 1.5;
+    }
+    color: $oc-gray-9;
+    margin-top: 2rem;
+    font-size: 1.125rem;
+    .ql-editor {
+      padding: 0;
+    }
+    .ql-blank::before {
+      left: 0;
+    }
+  }
+}
